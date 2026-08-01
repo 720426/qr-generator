@@ -3,206 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ACE GOLD - Product Information</title>
-
+<title>SGT Biotechnologies - Product Information</title>
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
-
-body{
-background:#f4f4f4;
-}
-
-.header{
-background:#0b6b2d;
-color:#fff;
-text-align:center;
-padding:15px;
-font-size:28px;
-font-weight:bold;
-}
-
-.company{
-background:#fff;
-padding:20px;
-text-align:center;
-}
-
-.company img{
-height:80px;
-}
-
-.company h1{
-color:#0b6b2d;
-margin-top:10px;
-font-size:42px;
-}
-
-.company p{
-color:#ff8c00;
-font-size:24px;
-}
-
-.card{
-width:95%;
-max-width:900px;
-margin:25px auto;
-background:#fff;
-border-radius:20px;
-padding:30px;
-border:3px solid #0b6b2d;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-font-size:22px;
-}
-
-td{
-padding:12px;
-vertical-align:top;
-}
-
-.title{
-font-weight:bold;
-width:250px;
-}
-
-.btns{
-text-align:center;
-margin-top:30px;
-}
-
-.btn{
-display:inline-block;
-background:#14a44d;
-color:#fff;
-padding:14px 35px;
-margin:10px;
-text-decoration:none;
-border-radius:30px;
-font-size:20px;
-font-weight:bold;
-}
-
-.btn:hover{
-background:#0b6b2d;
-}
-
-.footer{
-margin-top:30px;
-}
-
-.footer img{
-width:100%;
-border-radius:0 0 20px 20px;
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#eef2ef}
+.header{background:#0b6b2d;color:#fff;text-align:center;padding:16px;font-size:32px;font-weight:bold}
+.company{background:#fff;text-align:center;padding:20px}
+.company img{width:110px;height:110px;object-fit:contain}
+.company h1{color:#0b6b2d;font-size:42px;margin-top:10px}
+.company p{color:#f08a00;font-size:24px}
+.card{max-width:900px;margin:25px auto;background:#fff;border:3px solid #0b6b2d;border-radius:25px;padding:25px;overflow:hidden}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+td{padding:12px;vertical-align:top;word-break:break-word}
+td:first-child{width:38%;font-weight:bold}
+.btns{text-align:center;margin-top:20px}
+button{background:#18a64b;color:#fff;border:none;padding:14px 32px;border-radius:30px;font-size:18px;font-weight:bold;cursor:pointer;margin:8px}
+button:hover{background:#0b6b2d}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999}
+.modal-content{background:#fff;width:95%;max-width:1100px;margin:40px auto;padding:15px;border-radius:12px}
+.modal img{width:100%;height:auto}
+.close{float:right;font-size:32px;font-weight:bold;cursor:pointer}
+.footer{text-align:center;color:#666;padding:18px}
+@media(max-width:600px){
+.header{font-size:22px}
+.company h1{font-size:24px}
+.company p{font-size:18px}
+td{display:block;width:100%;padding:8px}
+td:first-child{width:100%;padding-bottom:2px}
+button{width:90%}
 }
 </style>
-
 </head>
-
 <body>
 
-<div class="header">
-PRODUCT INFORMATION
-</div>
+<div class="header">PRODUCT INFORMATION</div>
 
 <div class="company">
-
-<img src="logo.png">
-
+<img src="logo.png" alt="SGT Logo">
 <h1>SGT BIOTECHNOLOGIES</h1>
-
 <p>Innovation for Better Agriculture</p>
-
 </div>
 
 <div class="card">
-
 <table>
-
-<tr>
-<td class="title">Unique Identifier</td>
-<td>SGT-ACE-2026-001</td>
-</tr>
-
-<tr>
-<td class="title">Product Name</td>
-<td><b>ACE GOLD</b></td>
-</tr>
-
-<tr>
-<td class="title">Technical Name</td>
-<td>Amino Acid 20%</td>
-</tr>
-
-<tr>
-<td class="title">Batch Number</td>
-<td>AG20001</td>
-</tr>
-
-<tr>
-<td class="title">Mfg. Date</td>
-<td>01/08/2026</td>
-</tr>
-
-<tr>
-<td class="title">Exp. Date</td>
-<td>31/07/2028</td>
-</tr>
-
-<tr>
-<td class="title">Marketed By</td>
-<td>SGT BIOTECHNOLOGIES</td>
-</tr>
-
-<tr>
-<td class="title">Manufactured By</td>
-<td>SGT BIOTECHNOLOGIES</td>
-</tr>
-
-<tr>
-<td class="title">Customer Care</td>
-<td>+91 98765 43210</td>
-</tr>
-
-<tr>
-<td class="title">Email</td>
-<td>support@sgtbiotech.com</td>
-</tr>
-
-<tr>
-<td class="title">Website</td>
-<td>www.sgtbiotech.com</td>
-</tr>
-
+<tr><td>Unique Identifier</td><td>SGT-ACE-2026-001</td></tr>
+<tr><td>Product Name</td><td><b>ACE GOLD</b></td></tr>
+<tr><td>Technical Name</td><td>Amino Acid 20%</td></tr>
+<tr><td>Batch Number</td><td>AG20001</td></tr>
+<tr><td>Mfg. Date</td><td>01/08/2026</td></tr>
+<tr><td>Exp. Date</td><td>31/07/2028</td></tr>
+<tr><td>Marketed By</td><td>SGT BIOTECHNOLOGIES</td></tr>
+<tr><td>Manufactured By</td><td>SGT BIOTECHNOLOGIES</td></tr>
+<tr><td>Customer Care</td><td>+91 98765 43210</td></tr>
+<tr><td>Email</td><td>support@sgtbiotech.com</td></tr>
+<tr><td>Website</td><td>www.sgtbiotech.com</td></tr>
 </table>
 
 <div class="btns">
+<button onclick="openLabel()">View Label</button>
+<button onclick="window.open('leaflet.pdf','_blank')">View Leaflet</button>
+</div>
+</div>
 
-<a href="label.jpg" class="btn" target="_blank">
-View Label
-</a>
-
-<a href="leaflet.pdf" class="btn" target="_blank">
-View Leaflet
-</a>
-
+<div id="labelModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeLabel()">&times;</span>
+<img src="label.jpg" alt="Product Label">
+</div>
 </div>
 
 <div class="footer">
-
-<img src="field.jpg">
-
+&copy; 2026 SGT Biotechnologies. All Rights Reserved.
 </div>
 
-</div>
+<script>
+function openLabel(){
+ document.getElementById('labelModal').style.display='block';
+}
+function closeLabel(){
+ document.getElementById('labelModal').style.display='none';
+}
+window.onclick=function(e){
+ const m=document.getElementById('labelModal');
+ if(e.target===m){m.style.display='none';}
+}
+</script>
 
 </body>
 </html>
