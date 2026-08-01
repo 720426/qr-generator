@@ -21,8 +21,8 @@ td:first-child{width:38%;font-weight:bold}
 button{background:#18a64b;color:#fff;border:none;padding:14px 32px;border-radius:30px;font-size:18px;font-weight:bold;cursor:pointer;margin:8px;white-space:normal}
 button:hover{background:#0b6b2d}
 .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999}
-.modal-content{background:#fff;width:95%;max-width:1100px;margin:40px auto;padding:15px;border-radius:12px;box-sizing:border-box}
-.modal img{width:100%;height:auto;display:block}
+.modal-content{background:#fff;width:95%;max-width:1100px;margin:40px auto;padding:15px;border-radius:12px;box-sizing:border-box;max-height:90vh;overflow:auto}
+.modal img{max-width:100%;width:auto;height:auto;display:block;margin:0 auto;max-height:calc(90vh - 80px)}
 .close{float:right;font-size:32px;font-weight:bold;cursor:pointer}
 .footer{text-align:center;color:#666;padding:18px}
 @media(max-width:600px){
@@ -65,7 +65,7 @@ button{width:90%}
 <div id="labelModal" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeLabel()">&times;</span>
-<img src="potash20.png" alt="Product Label">
+<img id="labelImage" src="potash20.png" alt="Product Label" onerror="handleImageError()">
 </div>
 </div>
 
@@ -74,12 +74,25 @@ button{width:90%}
 </div>
 
 <script>
-function openLabel(){
- document.getElementById('labelModal').style.display='block';
-}
 function closeLabel(){
- document.getElementById('labelModal').style.display='none';
+	document.getElementById('labelModal').style.display='none';
 }
+
+function handleImageError(){
+	const img=document.getElementById('labelImage');
+	if(img) img.style.display='none';
+	alert('Label image failed to load (potash20.png). Please check the file name or upload the image to the repository.');
+	document.getElementById('labelModal').style.display='none';
+}
+
+function openLabel(){
+	const src = 'potash20.png';
+	const test = new Image();
+	test.onload = function(){ document.getElementById('labelModal').style.display='block'; };
+	test.onerror = function(){ handleImageError(); };
+	test.src = src;
+}
+
 window.onclick=function(e){
  const m=document.getElementById('labelModal');
  if(e.target===m){m.style.display='none';}
